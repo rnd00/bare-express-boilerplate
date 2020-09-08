@@ -1,0 +1,28 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: reg-sc-pd
+provisioner: kubernetes.io/gce-pd
+parameters:
+  type: pd-ssd
+  replication-type: regional-pd
+volumeBindingMode: Immediate
+allowedTopologies:
+- matchLabelExpressions:
+  - key: failure-domain.beta.kubernetes.io/zone
+    values:
+    - asia-northeast1-a
+    - asia-northeast1-c
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: regional-mongo-pvc
+  namespace: default
+spec:
+  storageClassName: reg-sc-pd
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
