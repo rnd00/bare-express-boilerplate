@@ -10,7 +10,9 @@ Run with `yarn install` for dependencies, then `yarn nodemon` for development.
 
 ## Before using
 
-If you decided to use this boilerplate, please change `package.json` first before using.
+If you (ever) decided to use this boilerplate, please change `package.json` first before using.
+
+Also Dockerfile and Kubernetes configuration files needs to be changed to fit your needs too.
 
 ## Required env tags
 
