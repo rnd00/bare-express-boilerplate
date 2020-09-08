@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1beta2
+kind: ManagedCertificate
+metadata:
+  name: boilerplate-test-cert
+spec:
+  domains:
+    - something.somewhat.cloud
