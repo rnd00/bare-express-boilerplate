@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: boilerplate-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "boilerplate-static-ip"
+    networking.gke.io/managed-certificates: boilerplate-test-cert
+    kubernetes.io/ingress.allow-http: "false"
+spec:
+  rules:
+  - host: something.somewhat.cloud
+    http:
+      paths:
+      - backend:
+          serviceName: boilerplate-svc
+          servicePort: 8080
+        path: /sample
+  - host: somewhere.somewhat.cloud
+    http:
+      paths:
+      - backend:
+          serviceName: boilerplate-svc
+          servicePort: 8080
+        path: /*
