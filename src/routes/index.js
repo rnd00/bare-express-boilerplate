@@ -1,5 +1,5 @@
-// const nr = require('./nr')
+const sample = require('./sample')
 
-// module.exports = {
-//   nr
-// }
+module.exports = {
+  sample
+}

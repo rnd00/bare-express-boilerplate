@@ -44,3 +44,7 @@ In this case, internal code will always ended with 998 in the end.
 ## Docker
 
 Yes, this boilerplate was made with Docker in mind. Using `node:10-alpine` as the base image.
+
+## Next
+
+?

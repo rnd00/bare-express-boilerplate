@@ -5,7 +5,7 @@ const pino = require('pino')
 const expressPino = require('express-pino-logger')
 
 // disabled because nothing inside routes
-// const routes = require('./routes')
+const routes = require('./routes')
 const { errorHandling, ErrorCustom, ERRORS } = require('./lib/error')
 
 const app = express()
@@ -37,6 +37,7 @@ async function start () {
   app.get('/', (req, res, next) => {
     res.status(200).send({ Hello: 'World' })
   })
+  app.use('/sample', routes.sample)
 
   app.all('*', (req, res, next) => {
     next(new ErrorCustom(ERRORS.commonNotFound))
