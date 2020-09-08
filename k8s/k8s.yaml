@@ -29,13 +29,15 @@ apiVersion: v1
 kind: Service
 metadata:
   name: boilerplate-svc
+  annotations:
+    beta.cloud.google.com/backend-config: '{"ports": {"8080":"boilerplate-backend-conf"}}'
 spec:
   selector:
     app: boilerplate-app
   ports:
   - port:  8080
     targetPort:  8080
-  type:  LoadBalancer
+  type:  NodePort
 ---
 apiVersion: v1
 kind: ConfigMap
