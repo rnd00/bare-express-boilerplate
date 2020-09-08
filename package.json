@@ -1,0 +1,30 @@
+{
+  "name": "bare-express-boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate for personal uses",
+  "main": "src/index.js",
+  "author": "rdiedan@gmail.com",
+  "license": "MIT",
+  "languageName": "node",
+  "scripts": {
+    "standard": "standardx",
+    "standard:fix": "standardx --fix",
+    "dev": "cross-env NODE_ENV=development node src/index.js",
+    "nodemon": "nodemon --exec yarn dev",
+    "production": "cross-env NODE_ENV=production node src/index.js"
+  },
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "express-pino-logger": "^5.0.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.27.0"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "standardx": "^5.0.0"
+  }
+}
