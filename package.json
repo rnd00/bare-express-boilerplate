@@ -1,7 +1,7 @@
 {
   "name": "bare-express-boilerplate",
   "version": "1.0.0",
-  "description": "boilerplate for personal uses",
+  "description": "Boilerplate for personal uses",
   "main": "src/index.js",
   "author": "rdiedan@gmail.com",
   "license": "MIT",
